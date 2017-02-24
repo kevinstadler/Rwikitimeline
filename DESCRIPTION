@@ -1,0 +1,20 @@
+Package: Rwikitimeline
+Title: Creating and plotting biographical timelines from Wikipedia data
+Description: This package combines the functions of `WikipediR` and `timeline` to enable automatic retrieval and visual presentation of biographical information from Wikipedia articles.
+Version: 0.1
+Authors@R: person("Kevin", "Stadler", email="kevin.stadler@ed.ac.uk", role=c("aut", "cre"))
+URL: https://github.com/kevinstadler/Rwikitimeline
+BugReports: https://github.com/kevinstadler/Rwikitimeline/issues
+License: MIT + file LICENSE
+Depends:
+    ggplot2
+Imports:
+    stats,
+    timeline,
+    WikipediR
+Suggests:
+    memoise,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.0.0

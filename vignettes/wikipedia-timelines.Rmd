@@ -1,0 +1,31 @@
+---
+title: "Biographical timelines from Wikipedia Infoboxes"
+author: "Kevin Stadler"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    fig_width: 6
+    fig_height: 3
+vignette: >
+  %\VignetteIndexEntry{Biographical timelines from Wikipedia Infoboxes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(tidy=TRUE)
+```
+
+```{r}
+library(Rwikitimeline)
+getwikibio("Hieronymus Bosch")
+```
+
+```{r}
+painters <- buildtimeline(c("Hieronymus Bosch", "Michelangelo", "Pieter Bruegel the Elder"))
+linguists <- buildtimeline(c("Johann Wolfgang von Goethe", "William Jones (philologist)", "Wilhelm von Humboldt", "Jacob Grimm", "Otto Jespersen", "Ferdinand de Saussure", "Edward Sapir", "Leonard Bloomfield", "Ludwig Wittgenstein"))
+print(linguists)
+
+plottimeline(painters, "Painters")
+plottimeline(linguists, npanels=2)
+```
